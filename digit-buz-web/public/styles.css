@@ -1,0 +1,14 @@
+body {
+  background: #dcdde3;
+}
+.navbar-nav .nav-item {
+  padding: 10px 5px 10px 5px;
+  transition: 1s ease;
+  cursor: pointer;
+}
+.navbar-nav .nav-item:hover {
+  background: #000000;
+}
+.nav-item:hover .nav-link {
+  color: #fefefe !important;
+}
