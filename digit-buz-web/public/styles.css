@@ -1,14 +1,42 @@
-body {
-  background: #dcdde3;
+:root {
+  --app-color0: #ffffff;
+  --app-color1: #35e158;
+  --app-color-black: #000000;
 }
+
 .navbar-nav .nav-item {
   padding: 10px 5px 10px 5px;
   transition: 1s ease;
   cursor: pointer;
 }
 .navbar-nav .nav-item:hover {
-  background: #000000;
+  background: var(--app-color1);
 }
 .nav-item:hover .nav-link {
-  color: #fefefe !important;
+  color: var(--app-color0) !important;
+  font-weight: 700;
+}
+
+.bg-color0 {
+  background-color: var(--app-color0);
+}
+.bg-color1 {
+  background-color: var(--app-color1);
+}
+.body-content {
+  background-color: var(--app-color1);
+  min-height: 100vh;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+.logo-text-left {
+  color: var(--app-color1);
+  font-weight: 800;
+}
+
+.logo-text-right {
+  color: var(--app-color-black);
+  font-weight: 600;
 }
