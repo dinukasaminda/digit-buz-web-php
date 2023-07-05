@@ -9,6 +9,14 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <link rel="stylesheet" href="./styles.css" />
+
+  <!-- angular widgets -->
+
+  <link rel="stylesheet" href="./widget1/styles.cfcfc49f65b71904.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="./widget1/styles.cfcfc49f65b71904.css">
+  </noscript>
+
 </head>
 
 <body class="bg-color0">
@@ -98,6 +106,9 @@
       </div>
     </div>
   </div>
+
+  <app-root></app-root>
+
   <?=
     $this->include('layout/footer');
   ?>
@@ -111,6 +122,16 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/a13e0df62b.js" crossorigin="anonymous"></script>
+
+  <!-- angular widgets -->
+
+  <script src="./widget1/runtime.3e6578a82c6709ff.js" type="module"></script>
+  <script src="./widget1/polyfills.281e3cd90f00246d.js" type="module"></script>
+  <script src="./widget1/main.7298ef732f53d6cd.js" type="module"></script>
+</body>
+
+</body>
+
 </body>
 
 </html>
