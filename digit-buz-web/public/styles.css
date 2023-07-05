@@ -23,9 +23,13 @@
 .bg-color1 {
   background-color: var(--app-color1);
 }
+.navbar {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.148);
+}
 .body-content {
-  background-color: var(--app-color1);
+  background-color: var(--app-color0);
   min-height: 100vh;
+  padding: 85px 20px 10px 20px;
 }
 
 .navbar-brand {
@@ -39,4 +43,87 @@
 .logo-text-right {
   color: var(--app-color-black);
   font-weight: 600;
+}
+.navbar-toggle {
+  padding: 50px;
+  cursor: pointer;
+  display: block;
+}
+@media screen and (max-width: 992px) {
+  .navbar-collapse {
+    padding-left: 30px;
+  }
+}
+
+.navbar-right-buttons {
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+#nav-icon1 {
+  width: 30px;
+  height: 35px;
+  position: relative;
+  margin: 15px 0 15px 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 50%;
+  background: var(--app-color-black);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon1:not(.collapsed) span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1:not(.collapsed) span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1:not(.collapsed) span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+#nav-icon1.collapsed span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1.collapsed span:nth-child(2) {
+  top: 18px;
+}
+
+#nav-icon1.collapsed span:nth-child(3) {
+  top: 36px;
 }
