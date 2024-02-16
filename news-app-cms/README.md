@@ -1,7 +1,8 @@
 ## News app CMS
 
-# models
+# generate jwt secret
 
 ```
+php artisan jwt:secret
 
 ```
