@@ -1,0 +1,13 @@
+.row-container {
+  display: flex;
+}
+
+.text-item {
+  flex: 1;
+  border: 1px solid #ccc; /* Optional: Add border for visual separation */
+  padding: 10px; /* Optional: Add padding for spacing */
+}
+.img-item {
+  width: 100px;
+  height: 100px;
+}

@@ -1,0 +1,35 @@
+<div>
+  <div *ngIf="postComponent.content_type == 'text'">
+    <p>{{ postComponent.content }}</p>
+  </div>
+  <div *ngIf="postComponent.content_type == 'h1'">
+    <h1>{{ postComponent.content }}</h1>
+  </div>
+  <div *ngIf="postComponent.content_type == 'h2'">
+    <h2>{{ postComponent.content }}</h2>
+  </div>
+
+  <div *ngIf="postComponent.content_type == 'link'">
+    <a [href]="postComponent.content">{{ postComponent.content }}</a>
+  </div>
+  <div *ngIf="postComponent.content_type == 'image'">
+    <img class="img-item" [src]="postComponent.content" alt="" />
+  </div>
+  <div
+    class="row-container"
+    *ngIf="postComponent.elements && postComponent.type == 'text-row'"
+  >
+    <app-post-component
+      class="text-item"
+      *ngFor="let child of postComponent.elements"
+      [postComponent]="child"
+    ></app-post-component>
+  </div>
+
+  <div *ngIf="postComponent.elements && postComponent.type == 'paragraph'">
+    <app-post-component
+      *ngFor="let child of postComponent.elements"
+      [postComponent]="child"
+    ></app-post-component>
+  </div>
+</div>
