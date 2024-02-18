@@ -86,6 +86,68 @@ export class PostEditorComponent {
         content_type: 'image',
         type: 'paragraph',
       },
+      {
+        id: '5',
+        alt_text: 'This is a paragraph',
+        content: '',
+        content_type: 'rich-text',
+        type: 'rich-text',
+        elements: [
+          {
+            id: '6',
+            alt_text: 'This is a paragraph',
+            content: 'On the other hand',
+            content_type: 'stylish-text',
+            type: 'paragraph',
+            styles: {
+              color: 'red',
+              'font-size': '20px',
+              'font-family': 'Arial',
+            },
+          },
+          {
+            id: '7',
+            alt_text: 'This is a paragraph',
+            content:
+              'we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment',
+            content_type: 'stylish-text',
+            type: 'paragraph',
+            styles: {
+              'font-size': '12px',
+              'font-weight': 'bold',
+              'font-family': 'Arial',
+            },
+          },
+          {
+            id: '9',
+            alt_text: 'This is a paragraph',
+            content: 'text with a link inside it',
+            content_type: 'text-link',
+            type: 'paragraph',
+            styles: {
+              'font-size': '12px',
+              'font-style': 'italic',
+              'font-family': 'Arial',
+            },
+            options: {
+              link: 'https://www.google.com',
+            },
+          },
+          {
+            id: '9',
+            alt_text: 'This is a paragraph',
+            content:
+              'nd equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. ',
+            content_type: 'stylish-text',
+            type: 'paragraph',
+            styles: {
+              'font-size': '12px',
+              'font-style': 'italic',
+              'font-family': 'Arial',
+            },
+          },
+        ],
+      },
     ],
   };
 }

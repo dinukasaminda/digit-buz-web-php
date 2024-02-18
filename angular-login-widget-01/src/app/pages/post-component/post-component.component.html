@@ -32,4 +32,26 @@
       [postComponent]="child"
     ></app-post-component>
   </div>
+  <div *ngIf="postComponent.elements && postComponent.type == 'rich-text'">
+    <div>
+      <div
+        class="text-paragraph-div"
+        *ngFor="let child of postComponent.elements"
+      >
+        <div
+          class="text-paragraph-div-inner"
+          *ngIf="child.content_type == 'stylish-text'"
+        >
+          <span [ngStyle]="child.styles"> {{ child.content }} </span>
+        </div>
+        <div
+          class="text-paragraph-div-inner"
+          *ngIf="child.content_type == 'text-link'"
+          [ngStyle]="child.styles"
+        >
+          <a [href]="child.options.link">{{ child.content }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

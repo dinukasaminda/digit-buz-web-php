@@ -5,4 +5,6 @@ export interface PostElement {
   content_type?: string;
   type: string;
   elements?: PostElement[];
+  styles?: any;
+  options?: any;
 }
