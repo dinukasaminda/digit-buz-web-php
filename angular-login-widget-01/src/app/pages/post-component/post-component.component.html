@@ -1,42 +1,61 @@
 <div>
-  <div *ngIf="postComponent.content_type == 'text'">
-    <p>{{ postComponent.content }}</p>
+  <button
+    *ngIf="EditMode"
+    mat-mini-fab
+    color="primary"
+    (click)="handleClick()"
+    matTooltip="Click To
+    Edit"
+    matTooltipPosition="above"
+    matTooltipClass="my-tooltip"
+  >
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Edit icon"
+      fontIcon="edit"
+      class="icon-small"
+    ></mat-icon>
+  </button>
+  <div *ngIf="PostComponent.content_type == 'text'">
+    <p>{{ PostComponent.content }}</p>
   </div>
-  <div *ngIf="postComponent.content_type == 'h1'">
-    <h1>{{ postComponent.content }}</h1>
+  <div *ngIf="PostComponent.content_type == 'h1'">
+    <h1>{{ PostComponent.content }}</h1>
   </div>
-  <div *ngIf="postComponent.content_type == 'h2'">
-    <h2>{{ postComponent.content }}</h2>
+  <div *ngIf="PostComponent.content_type == 'h2'">
+    <h2>{{ PostComponent.content }}</h2>
   </div>
 
-  <div *ngIf="postComponent.content_type == 'link'">
-    <a [href]="postComponent.content">{{ postComponent.content }}</a>
+  <div *ngIf="PostComponent.content_type == 'link'">
+    <a [href]="PostComponent.content">{{ PostComponent.content }}</a>
   </div>
-  <div *ngIf="postComponent.content_type == 'image'">
-    <img class="img-item" [src]="postComponent.content" alt="" />
+  <div *ngIf="PostComponent.content_type == 'image'">
+    <img class="img-item" [src]="PostComponent.content" alt="" />
   </div>
   <div
     class="row-container"
-    *ngIf="postComponent.elements && postComponent.type == 'text-row'"
+    *ngIf="PostComponent.elements && PostComponent.type == 'text-row'"
   >
     <app-post-component
       class="text-item"
-      *ngFor="let child of postComponent.elements"
-      [postComponent]="child"
+      *ngFor="let child of PostComponent.elements"
+      [PostComponent]="child"
+      [EditMode]="EditMode"
     ></app-post-component>
   </div>
 
-  <div *ngIf="postComponent.elements && postComponent.type == 'paragraph'">
+  <div *ngIf="PostComponent.elements && PostComponent.type == 'paragraph'">
     <app-post-component
-      *ngFor="let child of postComponent.elements"
-      [postComponent]="child"
+      *ngFor="let child of PostComponent.elements"
+      [PostComponent]="child"
+      [EditMode]="EditMode"
     ></app-post-component>
   </div>
-  <div *ngIf="postComponent.elements && postComponent.type == 'rich-text'">
+  <div *ngIf="PostComponent.elements && PostComponent.type == 'rich-text'">
     <div>
       <div
         class="text-paragraph-div"
-        *ngFor="let child of postComponent.elements"
+        *ngFor="let child of PostComponent.elements"
       >
         <div
           class="text-paragraph-div-inner"

@@ -150,6 +150,11 @@ export class PostEditorComponent {
       },
     ],
   };
+  editMode = true;
+
+  toggleEdit() {
+    this.editMode = !this.editMode;
+  }
 }
 // TODO  enhanced-paragraph type  with the following content:
 // one paragraph with some text bold and some italic and some different colors and font sizes

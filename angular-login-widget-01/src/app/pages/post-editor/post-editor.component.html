@@ -1,4 +1,8 @@
 <h2>Editor</h2>
+<button (click)="toggleEdit()">Toggle Edit</button>
 <div *ngIf="post">
-  <app-post-component [postComponent]="post"></app-post-component>
+  <app-post-component
+    [PostComponent]="post"
+    [EditMode]="editMode"
+  ></app-post-component>
 </div>
